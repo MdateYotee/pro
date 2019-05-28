@@ -6,6 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>login</title>
 <link rel="stylesheet" href="bootstrap-4.3.1-dist\css\bootstrap.css">
+<script type="text/javascript" src="js\jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="bootstrap-4.3.1-dist\js\bootstrap.js"></script>
 </head>
 <body style="background-color: rgb(118, 216, 220);">
@@ -36,9 +37,14 @@
 
 </script>
  <p id="errerms" class="errerms" ></p> 
-	<form action="${pageContext.request.contextPath}/login" method="post">
+ 
+ <div class="row ">
+		
+ 		<div class="col-sm-4" ></div>
+ 		<div class="col-sm-4" >
+	<form action="${pageContext.request.contextPath }/login" method="post" style="color: blue; font-size: 120%;" >
 	<div class="form-group">
-    	<label for="exampleInputEmail1">Username</label>
+    	<label  for="exampleInputEmail1">Username</label>
     	<input type="email" class="form-control" id="username" aria-describedby="emailHelp" name="username" placeholder="Enter email">
     	<small id="emailHelp" class="form-text text-muted">We'll never share your Username with anyone else.</small>
     </div>
@@ -50,8 +56,8 @@
     	<input type="checkbox" class="form-check-input" id="exampleCheck1">
     	<label class="form-check-label" for="exampleCheck1">Check me out</label>
   	</div>
-  
-  <input type="submit" class="btn btn-primary" value="Submit"><br><br>
+  <div align="center" >
+  <input type="submit"  class="btn btn-primary"  value="Submit"><br><br></div>
   <div align="center">
   	<input type="button" class="btn btn-warning"onclick="MyFunction('ps')" value="+"> &nbsp;&nbsp;
   	<input type="button"  class="btn btn-warning" onclick="MyFunction('dt')" value="-"> &nbsp;&nbsp;
@@ -60,6 +66,8 @@
   </div>
 
 	</form>
-	
+	</div>
+	</div>
+	<jsp:include page="include/footer.jsp"></jsp:include>
 </body>
 </html>

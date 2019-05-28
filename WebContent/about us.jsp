@@ -3,20 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<style>
-table, th, td ,ol{
-  border: 2px solid black;
-  color:blue; 
-/*   background-color :red; */
-  font-size: 100%;
-}
-</style>
 </head>
 <head>
 <meta charset="ISO-8859-1">
 <title>about us</title>
 <link rel="stylesheet" href="bootstrap-4.3.1-dist\css\bootstrap.css">
+<script type="text/javascript" src="js\jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="bootstrap-4.3.1-dist\js\bootstrap.js"></script>
 </head>
 <body  style="background-color: rgb(118, 216, 220);">
@@ -24,14 +16,25 @@ table, th, td ,ol{
 <jsp:include page="include/Header.jsp"></jsp:include>
 <div align=center>
 <br><br> 
-	<img src= "${pageContext.request.contextPath}/im/circle-512.png" width="200" height="200"><br>
+<div class="container" >
+  <div class="card bg-primary" style="width:400px " >
+    <img class="card-img-top" src= "${pageContext.request.contextPath}/im/circle-512.png" width="250" height="250" alt="Card image" style="width:100%">
+  </div>
 </div>
-	<table style="width:100% ">
+
+
+	<br>
+</div>
+	<div class="container" >
+	<table class="table table-striped table-hover table-bordered">
+    <thead class="table table-dark">
   <tr>
     <th>Firstname</th>
     <th>Lastname</th> 
     <th>Age</th>
   </tr>
+  </thead>
+  <tbody class="table-danger">
   <tr>
     <td>Jill</td>
     <td>Smith</td>
@@ -53,6 +56,7 @@ table, th, td ,ol{
   <li>Eve Jackson</li>
   <li>John Doe</li>
 </ol>
-	
+</tbody>
+ </div>
 </body>
 </html>
